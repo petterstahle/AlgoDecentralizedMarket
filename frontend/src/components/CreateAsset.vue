@@ -1,7 +1,7 @@
 <template>
 <div>
     <div>
-        <h4>Create an asset</h4>
+        <h4>Create A Loyalty Point</h4>
         <label for="assetName">Asset Name</label>
         <input type="assetName"  id="assetName" placeholder="Ouis"
             v-model="form.assetName">

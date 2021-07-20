@@ -1,6 +1,6 @@
 <template>
 <div>
-  <h2>Loyalty Points Marketplace</h2>
+  <h2>LOYALTY POINTS MARKETPLACE</h2>
   <div class="Connection"> 
     <my-algo-connection v-on:clicked="saveAddress"></my-algo-connection>
   </div>
@@ -10,10 +10,10 @@
       <b-tab title="Helper functions">
         <create-asset :addrToUse="addrToUse"></create-asset>
       </b-tab> 
-      <b-tab title="Sell an asset">
+      <b-tab title="Sell A Loyalty Point">
         <sell-asset :addrToUse="addrToUse" v-on:returnSellParameters="createEscrow"></sell-asset>
       </b-tab>
-      <b-tab title="Buy an asset">
+      <b-tab title="Buy A Loyalty Point">
         <buy-asset v-on:returnBuyParameters="buy"></buy-asset>
       </b-tab>
       <b-tab title="Withdraw from your selling accounts">
