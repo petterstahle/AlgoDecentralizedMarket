@@ -10,10 +10,10 @@
       <b-tab title="Helper functions">
         <create-asset :addrToUse="addrToUse"></create-asset>
       </b-tab> 
-      <b-tab title="Sell A Loyalty Point">
+      <b-tab title="Sell A Loyalty Token">
         <sell-asset :addrToUse="addrToUse" v-on:returnSellParameters="createEscrow"></sell-asset>
       </b-tab>
-      <b-tab title="Buy A Loyalty Point">
+      <b-tab title="Buy A Loyalty Token">
         <buy-asset v-on:returnBuyParameters="buy"></buy-asset>
       </b-tab>
       <b-tab title="Withdraw from your selling accounts">
