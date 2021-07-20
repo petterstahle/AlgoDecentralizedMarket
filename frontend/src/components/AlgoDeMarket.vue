@@ -1,6 +1,6 @@
 <template>
 <div>
-  <h2>Algorand Decentralized Market Place</h2>
+  <h2>Loyalty Points Marketplace</h2>
   <div class="Connection"> 
     <my-algo-connection v-on:clicked="saveAddress"></my-algo-connection>
   </div>
