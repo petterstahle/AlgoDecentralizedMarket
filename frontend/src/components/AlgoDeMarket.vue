@@ -1,25 +1,34 @@
 <template>
 <div>
-  <h2>LOYALTY POINTS MARKETPLACE</h2>
-  <div class="Connection"> 
-    <my-algo-connection v-on:clicked="saveAddress"></my-algo-connection>
+  <div class="header-container">
+    <div class="header-stripe">
+      <h2 id=title>LOYALTY POINTS MARKETPLACE</h2>
+      <div class="Connection"> 
+        <my-algo-connection v-on:clicked="saveAddress"></my-algo-connection>
+      </div>
+    </div>
   </div>
 
   <div class="tabs">
-    <b-tabs content-class="mt-3" lazy>
+    <b-tabs content-class="mt-3" fill>
       <b-tab title="Helper functions">
         <create-asset :addrToUse="addrToUse"></create-asset>
       </b-tab> 
-      <b-tab title="Sell A Loyalty Token">
+      <b-tab title="Sell">
         <sell-asset :addrToUse="addrToUse" v-on:returnSellParameters="createEscrow"></sell-asset>
       </b-tab>
-      <b-tab title="Buy A Loyalty Token">
+      <b-tab title="Buy">
         <buy-asset v-on:returnBuyParameters="buy"></buy-asset>
       </b-tab>
-      <b-tab title="Withdraw from your selling accounts">
+      <b-tab title="Withdraw">
         <user-escrows :addrToUse="addrToUse" v-on:returnWithdrawParameters="withdraw"></user-escrows>
       </b-tab>
     </b-tabs>
+  </div>
+  <div class="footer-container">
+    <div class="footer-stripe">
+    <img src="logo.png" alt="LPM logo">
+    </div>
   </div>
 </div>
 </template>
@@ -282,8 +291,6 @@ concatTypedArrays: function (a, b) { // a, b TypedArray of same type
 <style> 
 
   body {
-    padding-left: 2%;
-    padding-right: 2%;
     background-color: rgb(240, 240, 240)
   }
   input {

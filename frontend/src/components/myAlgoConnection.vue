@@ -1,7 +1,7 @@
 <template>
     <div class="myAlgoConnection">
         <div>
-            <button v-if="!addrToUse" class="right" v-on:click="connectToMyAlgo()" ><span>Connect to myAlgo</span></button>
+            <button v-if="!addrToUse" class="right button button-primary" v-on:click="connectToMyAlgo()" ><span>Connect to myAlgo</span></button>
         </div>
         <div class="picker" v-if="pressed">
             <p>Which address would you like to use ?</p>
@@ -70,9 +70,10 @@ export default {
 }
 .myAlgoConnection {
     color: #000;
-    position: absolute;
-    top: 5%;
-    right: 5%;
+    padding: 10px;
+    /* position: absolute; */
+    /* top: 5%;
+    right: 5%; */
 }
 
 .showaddress {

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="button">
+        <div>
             <button v-on:click="getAssets()" ><span>Sell an Asset</span></button>
         </div>
         <template v-if="pressed">

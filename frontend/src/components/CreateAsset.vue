@@ -1,28 +1,36 @@
 <template>
 <div>
-    <div>
+    <div class="container">
         <h4>Create A Loyalty Token</h4>
-        <label for="assetName">Asset Name</label>
-        <input type="assetName"  id="assetName" placeholder="Ouis"
-            v-model="form.assetName">
-        <div class="error" v-if="$v.form.assetName.$invalid && submitStatus === 'ERROR'">Please enter an asset name</div>
-        <label for="assetUnitName">Asset Unit Name</label>
-        <input type="assetUnitName"  id="assetUnitName" placeholder="Oui"
-            v-model="form.assetUnitName">
-        <div class="error" v-if="$v.form.assetUnitName.$invalid && submitStatus === 'ERROR'">Please enter an asset unit name</div>
-        <label for="assetTotal">Asset Total</label>
-        <input type="assetTotal"  id="assetTotal" placeholder=1000
-            v-model.number="form.assetTotal">
-        <div class="error" v-if="$v.form.assetTotal.$invalid && submitStatus === 'ERROR'">Please enter an asset total</div>
-        <label for="assetURL">Asset URL</label>
-        <input type="assetURL"  id="assetURL" placeholder="http://oui.com"
-            v-model="form.assetURL">
-        <div class="error" v-if="$v.form.assetURL.$invalid && submitStatus === 'ERROR'">Please enter an asset URL</div>
-            <br />
+        <li>
+            <label for="assetName">Asset Name</label>
+            <input type="assetName"  id="assetName" placeholder="Ouis"
+                v-model="form.assetName">
+            <div class="error" v-if="$v.form.assetName.$invalid && submitStatus === 'ERROR'">Please enter an asset name</div>
+        </li>
+        <li>
+            <label for="assetUnitName">Asset Unit Name</label>
+            <input type="assetUnitName"  id="assetUnitName" placeholder="Oui"
+                v-model="form.assetUnitName">
+            <div class="error" v-if="$v.form.assetUnitName.$invalid && submitStatus === 'ERROR'">Please enter an asset unit name</div>
+        </li>
+        <li>
+            <label for="assetTotal">Asset Total</label>
+            <input type="assetTotal"  id="assetTotal" placeholder=1000
+                v-model.number="form.assetTotal">
+            <div class="error" v-if="$v.form.assetTotal.$invalid && submitStatus === 'ERROR'">Please enter an asset total</div>
+        </li>
+        <li>
+            <label for="assetURL">Asset URL</label>
+            <input type="assetURL"  id="assetURL" placeholder="http://oui.com"
+                v-model="form.assetURL">
+            <div class="error" v-if="$v.form.assetURL.$invalid && submitStatus === 'ERROR'">Please enter an asset URL</div>
+        </li>
+        <br />
         <button v-on:click="createAsset()" ><span>Create asset</span></button>
     </div>
     <br />
-    <div> 
+    <div class="container"> 
         <h4>You can opt-in an asset here:</h4> 
         <p>Opt-in asset number <input type="number" id="optinnumber" v-model.number="optinnumber"> <button v-on:click="optin(optinnumber)">opt-in</button></p>
     </div>
