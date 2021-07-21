@@ -144,12 +144,40 @@ input[type="button"].button-primary:focus {
   margin-bottom: 10px;
 }
 
+
 .tabs {
   padding-top: 20px;
   padding-bottom: 50px;
   width: 100%;
   font-size: auto;
   color: black;
+}
+
+@media (max-width: 750px) {
+  #title {
+    font-size: 10px;
+    line-height: 20px;
+  }
+  button .button, .button-primary {
+    height: 30px;
+    padding: 0 15px;
+    font-size: 7px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: .1rem;
+  }
+  .tabs {
+    font-size: 10px;
+  }
+
+  .tabs .button {
+    height: 30px;
+    padding: 0 15px;
+    font-size: 7px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: .1rem;
+  }
 }
 
 .footer-container {
@@ -186,4 +214,5 @@ body  {
   background-repeat: no-repeat;
 
 }
+
 </style>
