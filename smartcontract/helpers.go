@@ -16,6 +16,7 @@ const algodToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 const algodAddress = "http://localhost:4001"
 const indexerAddress = "http://localhost:8980"
 const indexerToken = ""
+const mnemonic1 = "25 words"
 
 func (c *AlgoClient) waitForConfirmation(txID string) (err error) {
 	status, err := c.c.Status().Do(context.Background())
