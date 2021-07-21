@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="header-container">
-    <div class="header-stripe">
+    <div class="container header-stripe">
       <h2 id=title>LOYALTY POINTS MARKETPLACE</h2>
       <div class="Connection"> 
         <my-algo-connection v-on:clicked="saveAddress"></my-algo-connection>

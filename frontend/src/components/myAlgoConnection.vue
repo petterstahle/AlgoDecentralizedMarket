@@ -11,9 +11,9 @@
             <button class="center" v-on:click="returnAddress()">Done</button>
         </div>
         <div class="showaddress" v-if="addrToUse && !pressed">
-            <button v-on:click="pressed=!pressed">{{addrToUse}}</button>
+            <button v-on:click="pressed=!pressed">Change address</button>
             <br />
-            <button class="right" v-on:click="addrToUse=''">Disconnect</button>
+            <button class="right button-primary" v-on:click="addrToUse=''">Disconnect</button>
         </div>
     </div>
 </template>
@@ -65,9 +65,16 @@ export default {
 }
 
 .picker {
-    border-style: double;
+    border-radius: 4px;
+    border: 1px solid rgb(0, 0, 0);
     background-color: rgb(228, 222, 222);
+    padding: 15px;
+    right: 50px;
+    opacity: 90%;
+    position: fixed;
+    text-align: center;
 }
+
 .myAlgoConnection {
     color: #000;
     padding: 10px;
@@ -80,6 +87,7 @@ export default {
     font-size: 0.8em;
 }
 
+
 ul {
     list-style-type: none;
 }
@@ -88,4 +96,65 @@ li {
     padding-left: none;
     font-size: 0.8em;
 }
+
+
+/* Popup container */
+.popup {
+  color: #33C3F0;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+/* Actual popup text */
+.popup .popuptext {
+  visibility: hidden;
+  width: 600px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: -75%;
+  left: 50%;
+  margin-left: -50px;
+}
+/* Code in popup */
+.popup code {
+  background-color: inherit;
+  border-style: hidden;
+  border-radius: 6px;
+  padding: 10px;
+}
+/* Popup arrow */
+/* .popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+} */
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+
 </style>

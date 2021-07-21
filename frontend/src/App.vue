@@ -63,6 +63,7 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
+  margin: 5px;
   color: #555;
   text-align: center;
   font-size: 11px;
