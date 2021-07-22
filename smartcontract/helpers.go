@@ -12,9 +12,9 @@ import (
 	"io/ioutil"
 )
 
-const algodToken = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-const algodAddress = "http://localhost:4001"
-const indexerAddress = "http://localhost:8980"
+const algodToken = ""
+const algodAddress = ""
+const indexerAddress = ""
 const indexerToken = ""
 const mnemonic1 = "25 words"
 

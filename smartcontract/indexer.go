@@ -21,6 +21,7 @@ func lookupAssets(w http.ResponseWriter, r *http.Request) {
 	var accountID AccountID
 	decoder := json.NewDecoder(r.Body)
 	err = decoder.Decode(&accountID)
+	log.Printf("Account ID: %v\n", accountID.AccountID)
 	if err != nil {
 		log.Printf("Error decoding body: %v\n", err)
 		http.Error(w, err.Error(), 400)

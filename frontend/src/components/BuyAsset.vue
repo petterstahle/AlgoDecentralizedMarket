@@ -33,7 +33,7 @@ export default {
           this.sellings = await response.json();
           console.log(this.sellings)
           },
-          returnBuyParameters: function(paymentAssetID, paymentAssetAmount, address, assetID,algoAmount) {
+          returnBuyParameters: function(paymentAssetID, paymentAssetAmount, address, assetID, algoAmount) {
               this.buyForm.assetID = assetID;
               this.buyForm.paymentAssetID = paymentAssetID;
               this.buyForm.paymentAssetAmount = paymentAssetAmount;
